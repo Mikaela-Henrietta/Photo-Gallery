@@ -1,8 +1,9 @@
-import {getPhotos, getPhoto} from '../api/photoApi';
+import {getPhotos, getPhotoById} from '../api/photoApi';
 
 //action types
 export const PHOTOS = 'PHOTOS'
 export const PHOTO = 'PHOTO'
+export const CLEAR_PHOTO = 'CLEAR_PHOTO'
 
 //actions
 export function getPhotosAction() {
@@ -13,8 +14,12 @@ export function getPhotosAction() {
 }
 
 export function getPhotoAction(id) {
-  return dispatch => getPhoto(id).then((photo) => {
+  return dispatch => getPhotoById(id).then((photo) => {
     console.log(photo)
     dispatch({ type: PHOTO, photo });
   })
+}
+
+export function clearPhotoAction() {
+  return dispatch => dispatch({ type: CLEAR_PHOTO })
 }

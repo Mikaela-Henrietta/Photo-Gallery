@@ -11,7 +11,7 @@ export const getPhotos = () => {
     })
   })
 }
-export const getPhoto = (id) => {
+export const getPhotoById = (id) => {
   return new Promise( (resolve,reject) => {
     fetch('https://jsonplaceholder.typicode.com/photos/' +id).then((response) => {
       return response.json();

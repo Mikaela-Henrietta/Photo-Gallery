@@ -1,4 +1,4 @@
-import {PHOTOS} from './actions';
+import {PHOTOS, CLEAR_PHOTO} from './actions';
 import {PHOTO} from './actions';
 
 const initialState = {
@@ -21,8 +21,13 @@ function reducers(state = initialState, action) {
       ...state,
       photo: action.photo
     }
-  default:
-    return state
+    case CLEAR_PHOTO:
+      return {
+        ...state,
+        photo: null
+      }
+    default:
+      return state
   }
 }
 
