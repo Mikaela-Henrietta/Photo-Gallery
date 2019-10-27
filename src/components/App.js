@@ -2,15 +2,18 @@ import React from 'react';
 import Card from './Card';
 import { getPhotosAction } from '../redux/actions';
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: 1
+      page: 1,
     }
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+    this.moveHome = this.moveHome.bind(this);
   }
   componentDidMount() {
     this.props.getPhotosAction()
@@ -29,6 +32,9 @@ class App extends React.Component {
       this.setState({page: this.state.page - 1})
     }
   }
+  moveHome() {
+   this.setState({page:1})
+  }
 
   render() {
     const { photos } = this.props
@@ -39,6 +45,7 @@ class App extends React.Component {
         <div className={"navigationButtonContainer"}>
           <button className={"navigationButton"} onClick={this.previousPage}>PREVIOUS</button>
           <button className={"navigationButton"} onClick={this.nextPage}>NEXT</button>
+          <FontAwesomeIcon className={"homeIcon"} onClick={this.moveHome} icon={faHome}/>
         </div>
       </div>
         <div className="cardsContainer">

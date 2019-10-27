@@ -6,6 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 class Details extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      imageStatus: 'loading'
+    }
+  }
   componentWillMount() {
     console.log('details', this)
     this.props.getPhotoAction(this.props.match.params.id);
@@ -13,7 +19,9 @@ class Details extends React.Component {
   componentWillUnmount(){
     this.props.clearPhotoAction();
   }
-  
+  handleImageLoaded() {
+    this.setState({ imageStatus: "loaded" });
+  }
   render() {
     if (this.props.photo && this.props.photo.url) {
       return (
@@ -25,7 +33,9 @@ class Details extends React.Component {
             <h1>Details</h1>
           </div>
           <div className={"photoContainer"}>
-            <img className={"bigImage"} src={this.props.photo.url}/>
+            <img className={"bigImage " + this.state.imageStatus} 
+              onLoad={this.handleImageLoaded.bind(this)} 
+              src={this.props.photo.url}/>
             <div className={"infoContainer"}>
               <h3 className={"h2"}>Title:</h3>
               <div className={"titleContainer"}>
