@@ -13,6 +13,7 @@ class Details extends React.Component {
   componentWillUnmount(){
     this.props.clearPhotoAction();
   }
+  
   render() {
     if (this.props.photo && this.props.photo.url) {
       return (
@@ -25,10 +26,12 @@ class Details extends React.Component {
           </div>
           <div className={"photoContainer"}>
             <img className={"bigImage"} src={this.props.photo.url}/>
-            <h3 className={"h2"}>Title:</h3>
-            <div className={"titleContainer"}>
-              <h2>{this.props.photo.title}</h2>
-              <Link to={'/'} className={"linkButton"}>BACK</Link>
+            <div className={"infoContainer"}>
+              <h3 className={"h2"}>Title:</h3>
+              <div className={"titleContainer"}>
+                <h2>{this.props.photo.title.toUpperCase()}</h2>
+                <Link to={'/'} className={"backButton"}>BACK</Link>
+              </div>
             </div>
           </div>
         </div>

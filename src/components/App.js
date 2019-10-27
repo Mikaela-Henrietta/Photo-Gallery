@@ -16,7 +16,7 @@ class App extends React.Component {
     this.props.getPhotosAction()
   }
   currentPage() {
-    const pageSize = 12
+    const pageSize = 24
     let start = pageSize * this.state.page - pageSize
     let end = pageSize * this.state.page 
     return this.props.photos.slice(start, end)
@@ -34,9 +34,13 @@ class App extends React.Component {
     const { photos } = this.props
     return (
       <div>
+      <div className={"galleryHeadingContainer"}>
         <h1 className="heading">Photo Gallery</h1>
-        <button onClick={this.nextPage}>next</button>
-        <button onClick={this.previousPage}>Previous</button>
+        <div className={"navigationButtonContainer"}>
+          <button className={"navigationButton"} onClick={this.previousPage}>PREVIOUS</button>
+          <button className={"navigationButton"} onClick={this.nextPage}>NEXT</button>
+        </div>
+      </div>
         <div className="cardsContainer">
           {this.currentPage().map((photo, index) => {
             return <Card photo={photo.thumbnailUrl} id={photo.id} key={index}></Card>
