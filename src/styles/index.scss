@@ -101,7 +101,6 @@ body {
 .bigImage {
   display: flex;
   width: 100%;
-  
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -125,6 +124,7 @@ body {
   display:flex;
   flex-direction: row;
   margin-top: 0;
+  justify-content: space-between;
 }
 .h2 {
 margin-bottom: 0px;

@@ -30,7 +30,7 @@ class Details extends React.Component {
               <h3 className={"h2"}>Title:</h3>
               <div className={"titleContainer"}>
                 <h2>{this.props.photo.title.toUpperCase()}</h2>
-                <Link to={'/'} className={"backButton"}>BACK</Link>
+                 <Link to={'/'} className={"backButton"}>BACK</Link>
               </div>
             </div>
           </div>
