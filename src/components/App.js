@@ -40,14 +40,14 @@ class App extends React.Component {
     const { photos } = this.props
     return (
       <div>
-      <div className={"galleryHeadingContainer"}>
-        <h1 className="heading">Photo Gallery</h1>
-        <div className={"navigationButtonContainer"}>
-          <button className={"navigationButton"} onClick={this.previousPage}>PREVIOUS</button>
-          <button className={"navigationButton"} onClick={this.nextPage}>NEXT</button>
-          <FontAwesomeIcon className={"homeIcon"} onClick={this.moveHome} icon={faHome}/>
+        <div className={"galleryHeadingContainer"}>
+          <h1 className="heading">Photo Gallery</h1>
+          <div className={"navigationButtonContainer"}>
+            <button className={"navigationButton"} onClick={this.previousPage}>PREVIOUS</button>
+            <button className={"navigationButton"} onClick={this.nextPage}>NEXT</button>
+            <FontAwesomeIcon className={"homeIcon"} onClick={this.moveHome} icon={faHome}/>
+          </div>
         </div>
-      </div>
         <div className="cardsContainer">
           {this.currentPage().map((photo, index) => {
             return <Card photo={photo.thumbnailUrl} id={photo.id} key={index}></Card>
