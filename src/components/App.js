@@ -10,6 +10,7 @@ class App extends React.Component {
       page: 1
     }
     this.nextPage = this.nextPage.bind(this);
+    this.previousPage = this.previousPage.bind(this);
   }
   componentDidMount() {
     this.props.getPhotosAction()
@@ -35,6 +36,7 @@ class App extends React.Component {
       <div>
         <h1 className="heading">Photo Gallery</h1>
         <button onClick={this.nextPage}>next</button>
+        <button onClick={this.previousPage}>Previous</button>
         <div className="cardsContainer">
           {this.currentPage().map((photo, index) => {
             return <Card photo={photo.thumbnailUrl} id={photo.id} key={index}></Card>
