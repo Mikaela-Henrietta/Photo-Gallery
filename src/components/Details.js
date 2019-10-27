@@ -13,7 +13,6 @@ class Details extends React.Component {
     }
   }
   componentWillMount() {
-    console.log('details', this)
     this.props.getPhotoAction(this.props.match.params.id);
   }
   componentWillUnmount(){
