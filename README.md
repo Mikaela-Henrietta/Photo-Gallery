@@ -1,7 +1,6 @@
 # Photo-Gallery
 A simple photo browser. React, Redux
 
-Photo gallery
 
 A simple image browser which shows images from http://jsonplaceholder.typicode.com/. 
 The grid page shows 12 images at one time. Clicking a next-button leads to the next page 
