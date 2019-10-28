@@ -17,7 +17,7 @@ I installed Webpack more or less according to these instructions https://www.val
 
 Running the app locally: 
 
-Installation: npm install
-Running the app: npm start
+Installation: npm install,
+Running the app: npm start,
 Production build: npm run build
 
