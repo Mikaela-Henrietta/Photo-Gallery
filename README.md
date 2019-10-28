@@ -3,8 +3,8 @@ A simple photo browser. React, Redux
 
 
 A simple image browser which shows images from http://jsonplaceholder.typicode.com/. 
-The grid page shows 12 images at one time. Clicking a next-button leads to the next page 
-which shows next 12 images. A previous-button shows 12 previous images. A home icon 
+The grid page shows 24 images at one time. Clicking a next-button leads to the next page 
+which shows next 24 images. A previous-button shows 24 previous images. A home icon 
 shows the first page of images. Clicking the small thumbnail-image will open details-page 
 that shows particular image as a bigger version and the image title. 
 
