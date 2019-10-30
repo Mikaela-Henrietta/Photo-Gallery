@@ -12,7 +12,7 @@ class Details extends React.Component {
       imageStatus: 'loading'
     }
   }
-  componentWillMount() {
+  componentDidMount() {
     this.props.getPhotoAction(this.props.match.params.id);
   }
   componentWillUnmount(){
