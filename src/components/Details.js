@@ -22,24 +22,25 @@ class Details extends React.Component {
     this.setState({ imageStatus: "loaded" });
   }
   render() {
+    
     if (this.props.photo && this.props.photo.url) {
       return (
-        <div className={"detailsContainer"}>
-          <div className={"headingContainer"}>
+        <div className="detailsContainer">
+          <div className="headingContainer">
             <Link to={'/'}>
-              <FontAwesomeIcon className={"arrowLeft"} icon={faAngleLeft}/>
+              <FontAwesomeIcon className="arrowLeft" icon={faAngleLeft}/>
             </Link>
             <h1>Details</h1>
           </div>
-          <div className={"photoContainer"}>
+          <div className="photoContainer">
             <img className={"bigImage " + this.state.imageStatus} 
               onLoad={this.handleImageLoaded.bind(this)} 
               src={this.props.photo.url}/>
-            <div className={"infoContainer"}>
-              <h3 className={"h2"}>Title:</h3>
-              <div className={"titleContainer"}>
+            <div className="infoContainer">
+              <h3 className="h2">Title:</h3>
+              <div className="titleContainer">
                 <h2>{this.props.photo.title.toUpperCase()}</h2>
-                 <Link to={'/'} className={"backButton"}>BACK</Link>
+                 <Link to={'/'} className="backButton">BACK</Link>
               </div>
             </div>
           </div>
@@ -47,10 +48,10 @@ class Details extends React.Component {
       );
     }
     return (
-    <div className={"detailsContainer"}>
-      <div className={"headingContainer"}>
+    <div className="detailsContainer">
+      <div className="headingContainer">
         <Link to={'/'}>
-          <FontAwesomeIcon className={"arrowLeft"} icon={faAngleLeft}/>
+          <FontAwesomeIcon className="arrowLeft" icon={faAngleLeft}/>
         </Link>
       </div>
     </div>

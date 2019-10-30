@@ -1,5 +1,5 @@
-import {PHOTOS, CLEAR_PHOTO} from './actions';
-import {PHOTO} from './actions';
+
+import {PHOTOS, CLEAR_PHOTO, PHOTO} from './actions';
 
 const initialState = {
   photos: [],

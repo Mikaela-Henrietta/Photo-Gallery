@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 class Card extends React.Component {
 
-  render() { 
-    console.log(this)
+  render() {
     return (
         <div className="card">
           <Link to={'/details/' + this.props.id}>

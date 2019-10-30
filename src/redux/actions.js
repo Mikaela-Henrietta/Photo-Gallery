@@ -5,8 +5,9 @@ export const PHOTOS = 'PHOTOS'
 export const PHOTO = 'PHOTO'
 export const CLEAR_PHOTO = 'CLEAR_PHOTO'
 
-//actions
+//action creators
 export function getPhotosAction() {
+  // redux thunk
   return dispatch => getPhotos().then((photos) => {
     dispatch({ type: PHOTOS, photos });
   })
