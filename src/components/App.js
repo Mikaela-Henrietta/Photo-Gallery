@@ -37,7 +37,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { photos } = this.props
     return (
       <div>
         <div className="galleryHeadingContainer">
